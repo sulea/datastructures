@@ -58,35 +58,7 @@ void initializeSweepLineEventList() {
 					&rect5));
 }
 
-void addToSleeplineStatus() {
 
-}
-
-void removeFromSleeplineStatus() {
-
-}
-
-void findIntervalInSleeplineStatus() {
-
-}
-
-void sweeping() {
-	list<Event*>::iterator it;
-	for (it = sweepLineEventList->begin(); it != sweepLineEventList->end(); it++) {
-		switch((*it)->eventType)
-		{
-			case Event::LeftEdge:
-				addToSleeplineStatus();
-				break;
-			case Event::RightEdge:
-				removeFromSleeplineStatus();
-				break;
-			case Event::Point:
-				findIntervalInSleeplineStatus();
-				break;
-		}
-	}
-}
 
 int main() {
 	initializeSweepLineEventList();
